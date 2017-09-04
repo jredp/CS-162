@@ -1,0 +1,5 @@
+Dangling Pointer
+you have a pointer to something that becomes dangling
+so you need to see where you allocate everything, then see what the scope is for everything
+and see if you ever leave scope
+if you do, then you need to either redesign or delete before you leave scope

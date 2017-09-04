@@ -1,0 +1,38 @@
+  //////////////////// ** Author: Jared Parkinson 
+ //     Notes      // *** Date: 3/30/2016
+//////////////////// **** Desc: Module A Week 1
+
+Files: 
+	-Critter.hpp -Define, Critter.cpp -Functions
+	-Grid.hpp -Define, Grid.cpp -Functions
+	-Main - How many x and y? -Show User results
+	-Makefile -Create a makefile for you program and clean.
+	-Submit as .zip file
+
+
+Classes: 
+	Critter - Moves around a grid
+		-Data Member to Count (iterate) when a move is made and hold total moves made
+		-Data members for current x and y coordinates
+		-Member Function that randomly moves it one space in one of 4 directions.
+		-Source and header files needed for Critter Class
+
+	Grid - Grid will be dynamic array chosen by user at runtime	
+		Array size is chosen at time of Compile in C++, 
+		therefore, Array must be dynamic and changed when user inputs data
+		-2D array data member
+		-Array of Chars (1 char)
+		-updateLocation() function used by Critter class to pass new location of Critter to be displayed (C for critter, - for grid)
+		-
+
+	Starting location of Critter C random:  srand(time(NULL))
+		This will require including time.h and stdlib.h
+
+MAIN:
+	- How large do you want the Grid to be? ROWS X and COLUMNS Y
+
+
+
+Yes. You first dynamically allocate an array of pointers (new char*[colNums]) and then loop through that and dynamically allocate arrays of the # of rows (new char[rowNums]). Just looks at what Cody has up there.
+
+One thing, and it doesn't really matter for this program now because it doesn't run for a long time, but you should clear this memory. That means looping through the pointer array and deleting each "column" like delete [] array[colNum] and then delete the pointer array like delete [] array. That will avoid memory leaks. You should review that too.
